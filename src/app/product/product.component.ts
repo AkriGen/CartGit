@@ -42,6 +42,7 @@ export class ProductComponent implements OnInit {
   addToCart(product: Product) {
     if (product && product.ProductId) {
       this.cartService.addToCart(product);
+      this.toastr.success(`${product.ProductName} is successfully added to cart!!`)
 
      
     } else {
